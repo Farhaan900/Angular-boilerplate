@@ -5,9 +5,9 @@ import { Body2Component } from './body2/body2.component';
 
 
 const routes: Routes = [ 
-  { path: 'body', component: BodyComponent },
+  { path: '', component: BodyComponent },
   { path: 'body2', component: Body2Component},
-  { path: '**', redirectTo: 'body' }
+  { path: '**', redirectTo: '' }
 ];
 
 @NgModule({
