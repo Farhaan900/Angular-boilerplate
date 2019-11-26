@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
+import { environment } from '../environments/environment';
  
 import { Observable, of } from 'rxjs';
 import { catchError, map, tap } from 'rxjs/operators';
@@ -9,19 +10,21 @@ import { catchError, map, tap } from 'rxjs/operators';
 })
 export class TopicsService {
 
-  constructor(){ }
+  constructor(private http: HttpClient){ }
 
 
-  // getTopics () {
-  //   return this.http.get("http://localhost:3000/topics");
-  // }
+  getTopics () {
+    return this.http.get(environment.dbUrl);
+  }
 
-  // setPlayers (name,score) {
-  //   return this.http
-  // .post("http://localhost:3000/topics", {
-  //   name,score
-  // })
-  // .subscribe(console.log);
+  //this is a post service which isnt used yet in the code
+  setTopics (name,department,details) {
+    return this.http.post(environment.dbUrl, {
+    name,
+    department,
+    details
+  })
+  .subscribe(console.log);
 
-  // }
+  }
 }

@@ -1,1 +1,13 @@
-<p>thesis-topics works!</p>
+<br>
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Department</th>
+    <th>Details</th>
+  </tr>
+  <tr *ngFor="let topic of topics">
+  <td>{{topic.name}}</td>
+  <td>{{topic.department}}</td>
+  <td>{{topic.details}}</td>
+  </tr>
+</table>
