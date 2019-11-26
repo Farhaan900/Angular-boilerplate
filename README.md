@@ -1,6 +1,6 @@
 # ThesisPortalApp
 
-This contains the angular app along with a Dockerfile and docker-compose
+This repo contains the angular app along with a Dockerfile and docker-compose.
 It also contains a mock json-server database which can be used during development.
 
 ## Development server
